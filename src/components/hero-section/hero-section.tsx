@@ -9,6 +9,7 @@ import {
   HeroImageSection
 } from './hero-section.style'
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
+import { Button } from 'components/button/button'
 
 export const HeroSection = () => (
   <HeroSectionWrapper>
@@ -24,6 +25,7 @@ export const HeroSection = () => (
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ab eveniet rerum
           voluptas atque deserunt ullam, consectetur eaque non ex.
         </ArticleContent>
+        <Button>Show more</Button>
       </HeroArticle>
       <HeroImageSection></HeroImageSection>
     </HeroSectionInnerWrapper>

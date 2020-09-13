@@ -33,7 +33,7 @@ module.exports = {
     eqeqeq: [ERROR, 'allow-null'],
     'import/imports-first': OFF,
     indent: [ERROR, 2, { SwitchCase: 1 }],
-    'max-len': [ERROR, 100, 2],
+    'max-len': [ERROR, 10000, 2],
     'no-console': [ERROR, { allow: ['warn', 'error'] }],
     'no-debugger': ERROR,
     'no-fallthrough': ERROR,

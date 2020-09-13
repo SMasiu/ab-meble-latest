@@ -33,7 +33,7 @@ export const HeaderWord = styled.span`
 `
 
 export const ArticleContent = styled.p`
-  margin-top: 20px;
+  margin: 30px 0 10px;
   max-width: 500px;
 `
 

@@ -28,3 +28,7 @@ export const getHeadingUnderline = ({ theme }: ThemeProps) => css`
     ${getBgColor('primary300')}
   }
 `
+
+export const getBorder = (color: string, width: string) => ({ theme }: ThemeProps) => css`
+  border: solid ${width} ${((theme.colors as unknown) as { [key: string]: string })[color]};
+`

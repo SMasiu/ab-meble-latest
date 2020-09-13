@@ -15,5 +15,23 @@ export const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.dark100};
       font-family: ${theme.fontFamily.primary};
     }
+
+    button,
+    input,
+    select,
+    textarea {
+      background-color: ${theme.colors.light100};
+      color: ${theme.colors.dark100};
+      font-family: ${theme.fontFamily.primary};
+    }
+
+    img,
+    svg {
+      width: 100%;
+    }
+
+    svg {
+      display: block;
+    }
   `}
 `
