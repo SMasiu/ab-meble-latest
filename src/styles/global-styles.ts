@@ -11,8 +11,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      background-color: ${theme.colors.primary100};
-      color: ${theme.colors.secondary100};
+      background-color: ${theme.colors.light100};
+      color: ${theme.colors.dark100};
       font-family: ${theme.fontFamily.primary};
     }
   `}
