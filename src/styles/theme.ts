@@ -15,9 +15,9 @@ export const theme: Theme = {
   fontSize: {
     sm: '14px',
     md: '16px',
-    lg: '18px',
-    headingSm: '18px',
-    headingLg: '24px'
+    lg: '16px',
+    headingSm: '16px',
+    headingLg: '56px'
   },
   fontFamily: {
     primary: `'Montserrat', sans-serif`,

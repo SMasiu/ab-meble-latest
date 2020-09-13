@@ -9,3 +9,22 @@ export const getPageWidth = ({ theme }: ThemeProps) => css`
 export const getColor = (color: string) => ({ theme }: ThemeProps) => css`
   color: ${((theme.colors as unknown) as { [key: string]: string })[color]};
 `
+
+export const getBgColor = (color: string) => ({ theme }: ThemeProps) => css`
+  background-color: ${((theme.colors as unknown) as { [key: string]: string })[color]};
+`
+
+export const getHeadingUnderline = ({ theme }: ThemeProps) => css`
+  position: relative;
+  margin: 10px 0 20px;
+
+  &::after {
+    content: '';
+    width: 75px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    ${getBgColor('primary300')}
+  }
+`
