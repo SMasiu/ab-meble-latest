@@ -6,6 +6,7 @@ export const HeroSectionWrapper = styled.section`
   height: calc(100vh - 80px);
   min-height: 800px;
   position: relative;
+  margin-bottom: 100px;
   ${getBgColor('light200')}
 `
 

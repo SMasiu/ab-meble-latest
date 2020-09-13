@@ -32,3 +32,7 @@ export const getHeadingUnderline = ({ theme }: ThemeProps) => css`
 export const getBorder = (color: string, width: string) => ({ theme }: ThemeProps) => css`
   border: solid ${width} ${((theme.colors as unknown) as { [key: string]: string })[color]};
 `
+
+export const getFontSize = (fontSize: string) => ({ theme }: ThemeProps) => css`
+  font-size: ${((theme.fontSize as unknown) as { [key: string]: string })[fontSize]};
+`

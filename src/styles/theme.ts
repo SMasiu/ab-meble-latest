@@ -10,10 +10,10 @@ export const theme: Theme = {
     light300: '#ebebeb',
     dark100: '#232323',
     dark200: '#323232',
-    dark300: '#464646'
+    dark300: '#828282'
   },
   fontSize: {
-    sm: '14px',
+    sm: '13px',
     md: '16px',
     lg: '16px',
     headingSm: '16px',
