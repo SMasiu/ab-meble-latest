@@ -13,10 +13,14 @@ export const ButtonWrapper = styled.button`
   transition-duration: 0.3s;
   transition-property: background-color, color;
   will-change: background-color, color;
-  ${getBorder('dark100', '2px')}
   display: flex;
   align-items: center;
   justify-content: center;
+  ${getBorder('dark100', '2px')}
+
+  &:focus {
+    outline: none;
+  }
 
   &:hover {
     ${getBgColor('dark100')}

@@ -13,10 +13,6 @@ export const navbarInputs = {
       link: '/'
     },
     {
-      name: 'Projekty',
-      link: '/'
-    },
-    {
       name: 'Realizacje',
       link: '/'
     },

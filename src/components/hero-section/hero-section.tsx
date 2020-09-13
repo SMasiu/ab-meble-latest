@@ -6,13 +6,22 @@ import {
   HeroHeader,
   HeaderWord,
   ArticleContent,
-  HeroImageSection
+  HeroImageSection,
+  HeroImageWrapper1,
+  HeroImageWrapper2,
+  HeroImage,
+  SliderButtonWrapper,
+  SliderButton,
+  WaterMark,
+  DecorateLine
 } from './hero-section.style'
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
 import { Button } from 'components/button/button'
 
 export const HeroSection = () => (
   <HeroSectionWrapper>
+    <DecorateLine />
+    <WaterMark>meble</WaterMark>
     <HeroSectionInnerWrapper>
       <HeroArticle>
         <HeroHeader>
@@ -27,7 +36,19 @@ export const HeroSection = () => (
         </ArticleContent>
         <Button>Show more</Button>
       </HeroArticle>
-      <HeroImageSection></HeroImageSection>
+      <HeroImageSection>
+        <HeroImageWrapper2>
+          <HeroImage src="chair2.png"></HeroImage>
+        </HeroImageWrapper2>
+        <HeroImageWrapper1>
+          <HeroImage src="chair.png"></HeroImage>
+        </HeroImageWrapper1>
+      </HeroImageSection>
     </HeroSectionInnerWrapper>
+    <SliderButtonWrapper>
+      <SliderButton active={true} />
+      <SliderButton active={false} />
+      <SliderButton active={false} />
+    </SliderButtonWrapper>
   </HeroSectionWrapper>
 )
