@@ -2,7 +2,7 @@ import React from 'react'
 import { NavbarWrapper, NavbarList, NavbarListItem, NavbarListLink } from './navbar.style'
 import { navbarInputs } from 'inputs/navbar.inputs'
 
-export const Navbar = () => (
+export const Navbar: React.FC = () => (
   <NavbarWrapper>
     <NavbarList>
       {navbarInputs.items.map((item, i) => (

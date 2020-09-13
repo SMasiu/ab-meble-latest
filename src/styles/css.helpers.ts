@@ -7,5 +7,5 @@ export const getPageWidth = ({ theme }: ThemeProps) => css`
 `
 
 export const getColor = (color: string) => ({ theme }: ThemeProps) => css`
-  color: ${((theme.colors as any) as { [key: string]: string })[color]};
+  color: ${((theme.colors as unknown) as { [key: string]: string })[color]};
 `
