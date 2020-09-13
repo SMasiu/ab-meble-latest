@@ -35,7 +35,9 @@ export const Footer: React.FC = () => (
           <ColumnItem>Realizacje</ColumnItem>
         </FooterColumn>
         <FooterColumn>
-          <HeadingH3>Produkty i kategorie</HeadingH3>
+          <FooterColumnHeader>
+            <HeadingH3>Produkty i kategorie</HeadingH3>
+          </FooterColumnHeader>
           <ColumnItem>Fotele i krzesła obrotowe</ColumnItem>
           <ColumnItem>Kanapy i siedziska</ColumnItem>
           <ColumnItem>Krzesła do jadalni</ColumnItem>
