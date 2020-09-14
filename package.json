@@ -1,7 +1,7 @@
 {
-  "name": "syko_design",
+  "name": "ab_meble",
   "private": true,
-  "description": "Syko Design Website",
+  "description": "AB Meble, Meble biurowe",
   "version": "0.1.0",
   "license": "0BSD",
   "husky": {

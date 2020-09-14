@@ -7,9 +7,9 @@
 module.exports = {
   // pathPrefix: '',
   siteMetadata: {
-    title: `Syko Design`,
-    description: `Syko Design`,
-    author: `@sykodesign`
+    title: `AB Meble`,
+    description: `AB Meble, Meble biurowe`,
+    author: `@szymon_masko`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

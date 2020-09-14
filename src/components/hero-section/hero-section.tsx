@@ -27,7 +27,7 @@ export const HeroSection = () => (
         <HeroHeader>
           <HeadingH1>AB Meble</HeadingH1>
           <HeadingH2>
-            <HeaderWord>Meble</HeaderWord> <HeaderWord>biórowe</HeaderWord>
+            <HeaderWord>Meble</HeaderWord> <HeaderWord>biurowe</HeaderWord>
           </HeadingH2>
         </HeroHeader>
         <ArticleContent>
