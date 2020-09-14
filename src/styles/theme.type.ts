@@ -15,6 +15,7 @@ export interface FontSizeTheme {
   md: string
   lg: string
   headingSm: string
+  headingMd: string
   headingLg: string
 }
 

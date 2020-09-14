@@ -8,7 +8,7 @@ import {
   FooterColumnHeader,
   ColumnItem
 } from './footer.style'
-import { HeadingH3 } from 'components/headings/headings'
+import { HeadingH4 } from 'components/headings/headings'
 
 export const Footer: React.FC = () => (
   <FooterWrapper>
@@ -16,19 +16,19 @@ export const Footer: React.FC = () => (
       <FooterColumns>
         <FooterColumn>
           <FooterColumnHeader>
-            <HeadingH3>Kontakt</HeadingH3>
+            <HeadingH4>Kontakt</HeadingH4>
           </FooterColumnHeader>
           <ColumnItem>Email: email@example.com</ColumnItem>
           <ColumnItem>Tel.: 504 654 123</ColumnItem>
           <FooterColumnHeader>
-            <HeadingH3>Adres</HeadingH3>
+            <HeadingH4>Adres</HeadingH4>
             <ColumnItem>Olszynki 2-20,</ColumnItem>
             <ColumnItem>44-100 Gliwice</ColumnItem>
           </FooterColumnHeader>
         </FooterColumn>
         <FooterColumn>
           <FooterColumnHeader>
-            <HeadingH3>O firmie</HeadingH3>
+            <HeadingH4>O firmie</HeadingH4>
           </FooterColumnHeader>
           <ColumnItem>Czym się zajmujemy</ColumnItem>
           <ColumnItem>Projekty</ColumnItem>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => (
         </FooterColumn>
         <FooterColumn>
           <FooterColumnHeader>
-            <HeadingH3>Produkty i kategorie</HeadingH3>
+            <HeadingH4>Produkty i kategorie</HeadingH4>
           </FooterColumnHeader>
           <ColumnItem>Fotele i krzesła obrotowe</ColumnItem>
           <ColumnItem>Kanapy i siedziska</ColumnItem>

@@ -18,6 +18,14 @@ export const HeadingH2 = styled.h2`
 export const HeadingH3 = styled.h3`
   ${({ theme }: ThemeProps) => css`
     text-transform: uppercase;
+    font-size: ${theme.fontSize.headingMd};
+    color: ${theme.colors.dark100};
+  `}
+`
+
+export const HeadingH4 = styled.h4`
+  ${({ theme }: ThemeProps) => css`
+    text-transform: uppercase;
     font-size: ${theme.fontSize.headingSm};
     color: ${theme.colors.dark300};
   `}

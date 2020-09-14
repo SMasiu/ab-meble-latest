@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { getBgColor, getColor, getFontSize, getPageWidth } from 'styles/css.helpers'
 
 export const FooterWrapper = styled.footer`
-  padding: 50px;
+  padding: 50px 0;
   ${getBgColor('dark100')}
   ${getColor('light100')}
 `

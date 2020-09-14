@@ -17,6 +17,7 @@ export const theme: Theme = {
     md: '16px',
     lg: '16px',
     headingSm: '16px',
+    headingMd: '32px',
     headingLg: '56px'
   },
   fontFamily: {
