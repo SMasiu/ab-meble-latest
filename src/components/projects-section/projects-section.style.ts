@@ -40,7 +40,7 @@ export const ProjectItemWrapper = styled.article`
     content: '';
     z-index: 50;
     position: absolute;
-    width: 100%;
+    width: 300px;
     height: 400px;
     left: -25px;
     bottom: 20px;
@@ -70,6 +70,9 @@ export const ProjectHeader = styled.header`
 `
 
 export const ProjectHeading = styled(HeadingH4)`
+  display: block;
+  text-align: right;
+  width: 225px;
   margin-right: 50px;
   margin-left: 25px;
   ${getColor('dark100')}
