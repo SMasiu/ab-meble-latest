@@ -4,7 +4,7 @@ import { getColor, getFontSize } from 'styles/css.helpers'
 
 export const sharedInput = ({ theme }: ThemeProps) => css`
   width: 100%;
-  padding: 25px 5px 5px 5px;
+  padding: 25px 10px 10px 10px;
   border: none;
   margin-bottom: 25px;
   border-radius: 1px;
@@ -21,7 +21,7 @@ export const FieldWrapper = styled.section`
 
 export const StyledLabel = styled.label`
   position: absolute;
-  left: 5px;
+  left: 10px;
   top: 5px;
   ${getColor('dark200')}
   ${getFontSize('sm')}
