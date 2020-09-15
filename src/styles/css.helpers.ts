@@ -29,6 +29,22 @@ export const getHeadingUnderline = ({ theme }: ThemeProps) => css`
   }
 `
 
+export const getHeadingCenterUnderline = ({ theme }: ThemeProps) => css`
+  position: relative;
+  margin: 10px 0 20px;
+
+  &::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    ${getBgColor('primary300')}
+  }
+`
+
 export const getBorder = (color: string, width: string) => ({ theme }: ThemeProps) => css`
   border: solid ${width} ${((theme.colors as unknown) as { [key: string]: string })[color]};
 `

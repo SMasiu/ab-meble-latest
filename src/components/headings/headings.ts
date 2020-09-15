@@ -30,3 +30,10 @@ export const HeadingH4 = styled.h4`
     color: ${theme.colors.dark300};
   `}
 `
+
+export const HeadingH5 = styled.h5`
+  ${({ theme }: ThemeProps) => css`
+    font-size: ${theme.fontSize.headingSm};
+    color: ${theme.colors.dark100};
+  `}
+`
