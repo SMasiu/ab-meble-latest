@@ -7,7 +7,11 @@ import {
   ProductItem,
   ProductImageWrapper,
   ProductHeader,
-  ProductHeading
+  ProductHeading,
+  ProductImage,
+  ProductsCardsWrapper,
+  ProductCard,
+  CardImageWrapper
 } from './products-section.style'
 import { productsSectionInput } from 'inputs/products-section.input'
 
@@ -16,11 +20,21 @@ export const ProductsSection = () => (
     <ProductsHeader>
       <ProductsHeading>Katalog produktów</ProductsHeading>
     </ProductsHeader>
+    <ProductsCardsWrapper>
+      {productsSectionInput.cards.map((card, i) => (
+        <ProductCard key={i}>
+          <CardImageWrapper url={card.imgPath}></CardImageWrapper>
+          <ProductHeader>
+            <ProductHeading>{card.header}</ProductHeading>
+          </ProductHeader>
+        </ProductCard>
+      ))}
+    </ProductsCardsWrapper>
     <ProductsItemsWrapper>
       {productsSectionInput.items.map((item, i) => (
         <ProductItem key={i}>
           <ProductImageWrapper>
-            <img src={item.imgPath} alt="product" />
+            <ProductImage src={item.imgPath} alt="product" />
           </ProductImageWrapper>
           <ProductHeader>
             <ProductHeading>{item.header}</ProductHeading>

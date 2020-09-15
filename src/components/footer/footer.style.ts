@@ -22,6 +22,10 @@ export const FooterColumnHeader = styled.header`
   margin: 10px 0;
 `
 
+export const FooterColumnAddressHeader = styled(FooterColumnHeader)`
+  margin: 30px 0 10px;
+`
+
 export const ColumnItem = styled.p`
   padding: 5px 0;
   ${getFontSize('sm')}

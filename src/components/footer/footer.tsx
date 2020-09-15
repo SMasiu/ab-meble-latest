@@ -6,7 +6,8 @@ import {
   FooterColumns,
   FooterColumn,
   FooterColumnHeader,
-  ColumnItem
+  ColumnItem,
+  FooterColumnAddressHeader
 } from './footer.style'
 import { HeadingH4 } from 'components/headings/headings'
 
@@ -20,11 +21,11 @@ export const Footer: React.FC = () => (
           </FooterColumnHeader>
           <ColumnItem>Email: email@example.com</ColumnItem>
           <ColumnItem>Tel.: 504 654 123</ColumnItem>
-          <FooterColumnHeader>
+          <FooterColumnAddressHeader>
             <HeadingH4>Adres</HeadingH4>
             <ColumnItem>Olszynki 2-20,</ColumnItem>
             <ColumnItem>44-100 Gliwice</ColumnItem>
-          </FooterColumnHeader>
+          </FooterColumnAddressHeader>
         </FooterColumn>
         <FooterColumn>
           <FooterColumnHeader>
