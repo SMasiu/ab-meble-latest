@@ -1,6 +1,11 @@
 import React from 'react'
 import { ButtonWrapper, ButtonText, ButtonArrow } from './button.style'
 
+export interface ButtonProps {
+  color1?: string
+  color2?: string
+}
+
 function SvgArrowRight() {
   return (
     <svg viewBox="0 0 512 512">
@@ -13,8 +18,8 @@ function SvgArrowRight() {
 
 export default SvgArrowRight
 
-export const Button: React.FC = ({ children }) => (
-  <ButtonWrapper>
+export const Button: React.FC<ButtonProps> = ({ children, color1, color2 }) => (
+  <ButtonWrapper color1={color1 || 'dark100'} color2={color2 || 'light100'}>
     <ButtonText>{children}</ButtonText>
     <ButtonArrow>
       <SvgArrowRight />

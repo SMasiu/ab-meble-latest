@@ -10,6 +10,7 @@ import {
   FooterColumnAddressHeader
 } from './footer.style'
 import { HeadingH4 } from 'components/headings/headings'
+import { Contact } from 'components/contact/contact'
 
 export const Footer: React.FC = () => (
   <FooterWrapper>
@@ -45,6 +46,12 @@ export const Footer: React.FC = () => (
           <ColumnItem>Krzesła i fotele konferencyjne</ColumnItem>
           <ColumnItem>Meble gabinetowe</ColumnItem>
           <ColumnItem>Meble pracownicze</ColumnItem>
+        </FooterColumn>
+        <FooterColumn>
+          <FooterColumnHeader>
+            <HeadingH4>Napisz do nas</HeadingH4>
+          </FooterColumnHeader>
+          <Contact />
         </FooterColumn>
       </FooterColumns>
       <FooterCopyRight>&copy; AB Meble</FooterCopyRight>
