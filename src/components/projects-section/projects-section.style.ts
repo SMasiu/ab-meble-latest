@@ -75,6 +75,7 @@ export const ProjectHeading = styled(HeadingH4)`
   width: 225px;
   margin-right: 50px;
   margin-left: 25px;
+  font-weight: 800;
   ${getColor('dark100')}
   ${getFontSize('headingMd')}
 `

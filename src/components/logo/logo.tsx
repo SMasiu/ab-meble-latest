@@ -3,6 +3,6 @@ import { LogoWrapper, LogoImg } from './logo.style'
 
 export const Logo: React.FC = () => (
   <LogoWrapper>
-    <LogoImg src="logo.svg" alt="logo"></LogoImg>
+    <LogoImg src="/logo.svg" alt="logo"></LogoImg>
   </LogoWrapper>
 )

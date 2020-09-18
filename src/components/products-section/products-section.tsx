@@ -14,6 +14,7 @@ import {
   CardImageWrapper
 } from './products-section.style'
 import { productsSectionInput } from 'inputs/products-section.input'
+import { Link } from 'gatsby'
 
 export const ProductsSection = () => (
   <ProductsSectionWrapper>
@@ -22,24 +23,28 @@ export const ProductsSection = () => (
     </ProductsHeader>
     <ProductsCardsWrapper>
       {productsSectionInput.cards.map((card, i) => (
-        <ProductCard key={i}>
-          <CardImageWrapper url={card.imgPath}></CardImageWrapper>
-          <ProductHeader>
-            <ProductHeading>{card.header}</ProductHeading>
-          </ProductHeader>
-        </ProductCard>
+        <Link key={i} to={card.link}>
+          <ProductCard>
+            <CardImageWrapper url={card.imgPath}></CardImageWrapper>
+            <ProductHeader>
+              <ProductHeading>{card.header}</ProductHeading>
+            </ProductHeader>
+          </ProductCard>
+        </Link>
       ))}
     </ProductsCardsWrapper>
     <ProductsItemsWrapper>
       {productsSectionInput.items.map((item, i) => (
-        <ProductItem key={i}>
-          <ProductImageWrapper>
-            <ProductImage src={item.imgPath} alt="product" />
-          </ProductImageWrapper>
-          <ProductHeader>
-            <ProductHeading>{item.header}</ProductHeading>
-          </ProductHeader>
-        </ProductItem>
+        <Link to={item.link} key={i}>
+          <ProductItem>
+            <ProductImageWrapper>
+              <ProductImage src={item.imgPath} alt="product" />
+            </ProductImageWrapper>
+            <ProductHeader>
+              <ProductHeading>{item.header}</ProductHeading>
+            </ProductHeader>
+          </ProductItem>
+        </Link>
       ))}
     </ProductsItemsWrapper>
   </ProductsSectionWrapper>
