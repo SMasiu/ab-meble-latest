@@ -3,7 +3,7 @@ import { getPageWidth, getHeadingUnderline } from 'styles/css.helpers'
 import { ButtonBack, ButtonNext } from 'pure-react-carousel'
 
 export const ProductItemWrapper = styled.section`
-  padding: 100px 0;
+  padding: 50px 0 75px;
   ${getPageWidth}
 `
 

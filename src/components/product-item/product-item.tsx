@@ -48,8 +48,10 @@ export const ProductItem = () => {
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
-  const handleNextSlide = () => setCurrentSlide(currentSlide + 1)
-  const handlePrevSlide = () => setCurrentSlide(currentSlide - 1)
+  const handleNextSlide = () =>
+    setCurrentSlide(currentSlide === items.length - 1 ? 0 : currentSlide + 1)
+  const handlePrevSlide = () =>
+    setCurrentSlide(currentSlide === 0 ? items.length - 1 : currentSlide - 1)
 
   return (
     <ProductItemWrapper>
