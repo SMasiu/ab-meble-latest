@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components'
-import { getBgColor, getPageWidth, getHeadingCenterUnderline } from 'styles/css.helpers'
+import {
+  getBgColor,
+  getPageWidth,
+  getHeadingCenterUnderline,
+  getImgHoverBg
+} from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
 
 export const OtherCategoriesWrapper = styled.section`
@@ -20,7 +25,7 @@ export const CategoriesHeader = styled.header`
 
 export const CategoryItemsWrapper = styled.section`
   display: grid;
-  margin-top: 55px;
+  margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 `
@@ -37,6 +42,7 @@ export const CategoryItem = styled.figure<CategoryItemProps>`
   height: 250px;
   background-size: cover;
   background-position: center;
+  ${getImgHoverBg}
 
   ${({ path }: CategoryItemProps) => css`
     background-image: url(${path});

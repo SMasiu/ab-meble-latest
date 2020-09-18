@@ -5,7 +5,8 @@ import {
   CategoriesHeader,
   CategoryItemsWrapper,
   CategoryItem,
-  CategoryItemHeader
+  CategoryItemHeader,
+  CategoryItemWrapper
 } from './others-categories-section.style'
 import { HeadingH3, HeadingH4, HeadingH5 } from 'components/headings/headings'
 
@@ -34,12 +35,12 @@ export const OtherCategories = () => {
         </CategoriesHeader>
         <CategoryItemsWrapper>
           {items.map((item, i) => (
-            <CategoryItemHeader key={i}>
+            <CategoryItemWrapper key={i}>
               <CategoryItem path={item.path} />
               <CategoryItemHeader>
                 <HeadingH5>{item.header}</HeadingH5>
               </CategoryItemHeader>
-            </CategoryItemHeader>
+            </CategoryItemWrapper>
           ))}
         </CategoryItemsWrapper>
       </CategoriesInnerWrapper>

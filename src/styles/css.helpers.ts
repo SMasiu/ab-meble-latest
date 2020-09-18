@@ -52,3 +52,15 @@ export const getBorder = (color: string, width: string) => ({ theme }: ThemeProp
 export const getFontSize = (fontSize: string) => ({ theme }: ThemeProps) => css`
   font-size: ${((theme.fontSize as unknown) as { [key: string]: string })[fontSize]};
 `
+
+export const getImgHoverBg = ({ theme }: ThemeProps) => css`
+  position: relative;
+  z-index: 1000;
+  transition: box-shadow 0.3s;
+  will-change: box-shadow;
+  box-shadow: 0 0 0 ${theme.colors.primary100};
+
+  &:hover {
+    box-shadow: 10px 10px 0 ${theme.colors.primary100};
+  }
+`

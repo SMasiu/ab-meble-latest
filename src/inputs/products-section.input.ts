@@ -15,7 +15,11 @@ export const productsSectionInput = {
       imgPath: '/products/product7.jpg',
       link: 'produkty/sale-konferencyjne'
     },
-    { header: 'Social kuchnie', imgPath: 'products/product8.jpg', link: 'produkty/social-kuchnie' },
+    {
+      header: 'Social kuchnie',
+      imgPath: '/products/product8.jpg',
+      link: 'produkty/social-kuchnie'
+    },
     {
       header: 'Systemy akustyczne',
       imgPath: '/products/product9.jpg',

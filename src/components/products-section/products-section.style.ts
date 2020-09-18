@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { HeadingH3, HeadingH5 } from 'components/headings/headings'
-import { getHeadingCenterUnderline, getPageWidth } from 'styles/css.helpers'
+import { getHeadingCenterUnderline, getPageWidth, getImgHoverBg } from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
 
 export const ProductsSectionWrapper = styled.section`
@@ -26,6 +26,7 @@ export const ProductItem = styled.section``
 export const ProductImageWrapper = styled.section`
   padding: 25px;
   background: linear-gradient(135deg, rgba(252, 252, 252, 1) 0%, rgba(247, 247, 247, 1) 100%);
+  ${getImgHoverBg}
 `
 
 export const ProductImage = styled.img``
@@ -51,10 +52,12 @@ export type CardImageWrapperProps = {
   url: string
 } & ThemeProps
 
-export const CardImageWrapper = styled.figure<CardImageWrapperProps>`
+export const CardImage = styled.figure<CardImageWrapperProps>`
   background-image: url(${({ url }: CardImageWrapperProps) => url});
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 250px;
+  position: relative;
+  ${getImgHoverBg}
 `

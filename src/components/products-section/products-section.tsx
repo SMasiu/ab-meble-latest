@@ -11,7 +11,7 @@ import {
   ProductImage,
   ProductsCardsWrapper,
   ProductCard,
-  CardImageWrapper
+  CardImage
 } from './products-section.style'
 import { productsSectionInput } from 'inputs/products-section.input'
 import { Link } from 'gatsby'
@@ -25,7 +25,7 @@ export const ProductsSection = () => (
       {productsSectionInput.cards.map((card, i) => (
         <Link key={i} to={card.link}>
           <ProductCard>
-            <CardImageWrapper url={card.imgPath}></CardImageWrapper>
+            <CardImage url={card.imgPath} />
             <ProductHeader>
               <ProductHeading>{card.header}</ProductHeading>
             </ProductHeader>
