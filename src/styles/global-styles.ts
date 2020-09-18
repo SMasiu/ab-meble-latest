@@ -33,5 +33,9 @@ export const GlobalStyles = createGlobalStyle`
     svg {
       display: block;
     }
+
+    a {
+      text-decoration: none;
+    }
   `}
 `

@@ -25,6 +25,6 @@ export const theme: Theme = {
     secondary: `'Montserrat', sans-serif`
   },
   page: {
-    width: '1450px'
+    width: '1400px'
   }
 }
