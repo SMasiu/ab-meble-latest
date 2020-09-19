@@ -17,6 +17,7 @@ export const ProjectItemWrapper = styled.section`
     top: -20px;
     width: 750px;
     height: 400px;
+    opacity: 0.25;
     ${getBgColor('primary100')}
   }
 
