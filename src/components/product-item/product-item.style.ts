@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { getPageWidth, getHeadingUnderline, getHeadingCenterUnderline } from 'styles/css.helpers'
+import { getPageWidth, getHeadingUnderline } from 'styles/css.helpers'
 import { ButtonBack, ButtonNext, CarouselProvider } from 'pure-react-carousel'
 import { ThemeProps } from 'styles/theme.type'
 
