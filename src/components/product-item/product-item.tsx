@@ -12,7 +12,6 @@ import {
   MinimapWrapper,
   MinimapItemWrapper,
   MinimapImgWrapper,
-  CounterText,
   MinimapPrevBtn,
   MinimapNextBtn,
   CarouselMinimapProvider
@@ -88,9 +87,7 @@ export const ProductItem = () => {
             <ButtonBackStyled onClick={handlePrevSlide}>
               <Button>Poprzednie</Button>
             </ButtonBackStyled>
-            <CounterText>
-              {currentSlide + 1} z {items.length}
-            </CounterText>
+
             <ButtonNextStyled onClick={handleNextSlide}>
               <Button>Następne</Button>
             </ButtonNextStyled>

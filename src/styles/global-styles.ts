@@ -14,6 +14,10 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: ${theme.colors.light100};
       color: ${theme.colors.dark100};
@@ -40,6 +44,11 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
       text-decoration: none;
+    }
+
+    .slider {
+      width: 100%;
+      height: 100%;
     }
   `}
 `

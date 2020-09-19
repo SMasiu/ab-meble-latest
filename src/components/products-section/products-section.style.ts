@@ -4,7 +4,14 @@ import { getHeadingCenterUnderline, getPageWidth, getImgHoverBg } from 'styles/c
 import { ThemeProps } from 'styles/theme.type'
 
 export const ProductsSectionWrapper = styled.section`
-  ${getPageWidth}
+  position: relative;
+  ${getPageWidth};
+`
+
+export const ProductLinkAnchor = styled.div`
+  position: absolute;
+  left: 0;
+  top: -115px;
 `
 
 export const ProductsHeader = styled.header`

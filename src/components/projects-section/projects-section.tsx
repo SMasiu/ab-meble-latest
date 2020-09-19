@@ -11,6 +11,7 @@ import {
   ProjectContent
 } from './projects-section.style'
 import { Button } from 'components/button/button'
+import { Link } from 'gatsby'
 
 export const ProjectsSecton = () => (
   <ProjectsSectionWrapper>
@@ -20,19 +21,23 @@ export const ProjectsSecton = () => (
     <ProjectsInnerWrapper>
       <ProjectItemWrapper>
         <ProjectContent>
-          <ProjectImage url="projects/project1.jpg" />
+          <ProjectImage url="/projects/project1.jpg" />
           <ProjectHeader>
             <ProjectHeading>Projekty</ProjectHeading>
-            <Button>Zobacz więcej</Button>
+            <Link to="/projekty">
+              <Button>Zobacz więcej</Button>
+            </Link>
           </ProjectHeader>
         </ProjectContent>
       </ProjectItemWrapper>
       <ProjectItemWrapper>
         <ProjectContent>
-          <ProjectImage url="projects/project2.jpg" />
+          <ProjectImage url="/projects/project2.jpg" />
           <ProjectHeader>
             <ProjectHeading>Realizacje</ProjectHeading>
-            <Button>Zobacz więcej</Button>
+            <Link to="/realizacje">
+              <Button>Zobacz więcej</Button>
+            </Link>
           </ProjectHeader>
         </ProjectContent>
       </ProjectItemWrapper>

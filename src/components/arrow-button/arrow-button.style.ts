@@ -15,7 +15,7 @@ export const ArrowButtonWrapper = styled.div<ArrowButtonWrapperProps>`
   cursor: pointer;
   transition: all 0.3s;
     ${({ direction }: ArrowButtonWrapperProps) =>
-      direction === 'left' &&
+    direction === 'left' &&
       css`
         transform: scale(-1);
       `}

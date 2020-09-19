@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { getBgColor, getColor, getFontSize, getPageWidth } from 'styles/css.helpers'
+import { Link } from 'gatsby'
 
 export const FooterWrapper = styled.footer`
   padding: 50px 0;
@@ -29,6 +30,10 @@ export const FooterColumnAddressHeader = styled(FooterColumnHeader)`
 export const ColumnItem = styled.p`
   padding: 5px 0;
   ${getFontSize('sm')}
+`
+
+export const ColumnItemLink = styled(Link)`
+  ${getColor('light100')}
 `
 
 export const FooterCopyRight = styled.p`

@@ -6,23 +6,23 @@ export const navbarInputs = {
     },
     {
       name: 'O firmie',
-      link: '/'
+      link: '/#o-firmie'
     },
     {
       name: 'Katalog produktów',
-      link: '/'
+      link: '/#produkty'
     },
     {
       name: 'Projekty',
-      link: '/'
+      link: '/projekty'
     },
     {
       name: 'Realizacje',
-      link: '/'
+      link: '/realizacje'
     },
     {
       name: 'Kontakt',
-      link: '/'
+      link: '/#kontakt'
     }
   ]
 }

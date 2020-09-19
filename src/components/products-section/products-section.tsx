@@ -11,13 +11,15 @@ import {
   ProductImage,
   ProductsCardsWrapper,
   ProductCard,
-  CardImage
+  CardImage,
+  ProductLinkAnchor
 } from './products-section.style'
 import { productsSectionInput } from 'inputs/products-section.input'
 import { Link } from 'gatsby'
 
 export const ProductsSection = () => (
   <ProductsSectionWrapper>
+    <ProductLinkAnchor id="produkty" />
     <ProductsHeader>
       <ProductsHeading>Katalog produktów</ProductsHeading>
     </ProductsHeader>

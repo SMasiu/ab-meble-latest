@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { getBorder, getBgColor, getColor } from 'styles/css.helpers'
+import { getBorder, getBgColor, getColor, getFontSize } from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
 
 export type ButtonWrapperProps = {
@@ -14,7 +14,7 @@ export const ButtonArrow = styled.span`
   }
 `
 
-export const ButtonWrapper = styled.button<ButtonWrapperProps>`
+export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   ${({ theme, color1, color2 }: ButtonWrapperProps) => css`
     max-width: 200px;
     display: inline;
@@ -31,6 +31,7 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
     justify-content: center;
     ${getBorder(color1, '2px')}
     ${getColor(color1)}
+    ${getFontSize('sm')}
     
     &:focus {
       outline: none;

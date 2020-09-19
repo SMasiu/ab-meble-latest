@@ -12,7 +12,7 @@ import {
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
 
 export const AboutSection = () => (
-  <AboutSectionWrapper>
+  <AboutSectionWrapper id="o-firmie">
     <AboutImageSection>
       <ImageWrapper>
         <ArticleImage src="about.png" alt="about"></ArticleImage>

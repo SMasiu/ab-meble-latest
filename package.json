@@ -17,7 +17,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lint": "eslint **/*.ts*"
+    "lint": "eslint **/*.ts* --fix"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",

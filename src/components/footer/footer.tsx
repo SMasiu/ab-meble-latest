@@ -7,13 +7,15 @@ import {
   FooterColumn,
   FooterColumnHeader,
   ColumnItem,
-  FooterColumnAddressHeader
+  FooterColumnAddressHeader,
+  ColumnItemLink
 } from './footer.style'
 import { HeadingH4 } from 'components/headings/headings'
 import { Contact } from 'components/contact/contact'
+import { productsSectionInput } from 'inputs/products-section.input'
 
 export const Footer: React.FC = () => (
-  <FooterWrapper>
+  <FooterWrapper id="kontakt">
     <FooterInnerWrapper>
       <FooterColumns>
         <FooterColumn>
@@ -24,9 +26,9 @@ export const Footer: React.FC = () => (
           <ColumnItem>Tel.: 504 654 123</ColumnItem>
           <FooterColumnAddressHeader>
             <HeadingH4>Adres</HeadingH4>
-            <ColumnItem>Olszynki 2-20,</ColumnItem>
-            <ColumnItem>44-100 Gliwice</ColumnItem>
           </FooterColumnAddressHeader>
+          <ColumnItem>Olszynki 2-20,</ColumnItem>
+          <ColumnItem>44-100 Gliwice</ColumnItem>
         </FooterColumn>
         <FooterColumn>
           <FooterColumnHeader>
@@ -40,12 +42,11 @@ export const Footer: React.FC = () => (
           <FooterColumnHeader>
             <HeadingH4>Produkty i kategorie</HeadingH4>
           </FooterColumnHeader>
-          <ColumnItem>Fotele i krzesła obrotowe</ColumnItem>
-          <ColumnItem>Kanapy i siedziska</ColumnItem>
-          <ColumnItem>Krzesła do jadalni</ColumnItem>
-          <ColumnItem>Krzesła i fotele konferencyjne</ColumnItem>
-          <ColumnItem>Meble gabinetowe</ColumnItem>
-          <ColumnItem>Meble pracownicze</ColumnItem>
+          {[...productsSectionInput.cards, ...productsSectionInput.items].map((item, i) => (
+            <ColumnItem key={i}>
+              <ColumnItemLink to={item.link}>{item.header}</ColumnItemLink>
+            </ColumnItem>
+          ))}
         </FooterColumn>
         <FooterColumn>
           <FooterColumnHeader>

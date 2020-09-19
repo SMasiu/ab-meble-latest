@@ -34,7 +34,7 @@ export const HeroSection = () => (
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ab eveniet rerum
           voluptas atque deserunt ullam, consectetur eaque non ex.
         </ArticleContent>
-        <Button>Show more</Button>
+        <Button>Pokaż więcej</Button>
       </HeroArticle>
       <HeroImageSection>
         <HeroImageWrapper2>
