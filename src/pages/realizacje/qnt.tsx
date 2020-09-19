@@ -1,13 +1,14 @@
 import React from 'react'
 import { Layout } from 'components/layout/layout'
 import { SEO } from 'components/seo/seo'
-import { RealizationList } from 'components/realization-list/realization-list'
+import { RealizationsPage } from 'components/realizations-page/realizations-page'
+import { realizationInput } from 'inputs/realization.inputs'
 
 const Page: React.FC = () => {
   return (
     <Layout>
       <SEO title="Realizacje" />
-      <RealizationList />
+      <RealizationsPage realization={realizationInput} />
     </Layout>
   )
 }
