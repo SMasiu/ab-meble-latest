@@ -9,19 +9,20 @@ import {
   CategoryItemWrapper
 } from './others-categories-section.style'
 import { HeadingH3, HeadingH4, HeadingH5 } from 'components/headings/headings'
+import { PATH_PREFIX } from 'common/path'
 
 export const OtherCategories = () => {
   const items = [
     {
-      path: '/products/product5.jpg',
+      path: `${PATH_PREFIX}/products/product5.jpg`,
       header: 'Salony'
     },
     {
-      path: '/products/product6.jpg',
+      path: `${PATH_PREFIX}/products/product6.jpg`,
       header: 'Akustyka'
     },
     {
-      path: '/products/product7.jpg',
+      path: `${PATH_PREFIX}/products/product7.jpg`,
       header: 'Muzyka'
     }
   ]

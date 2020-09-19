@@ -18,6 +18,7 @@ import {
 } from './hero-section.style'
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
 import { Button } from 'components/button/button'
+import { PATH_PREFIX } from 'common/path'
 
 export const HeroSection = () => (
   <HeroSectionWrapper>
@@ -40,10 +41,10 @@ export const HeroSection = () => (
       </HeroArticle>
       <HeroImageSection>
         <HeroImageWrapper2>
-          <HeroImage src="chair2.png"></HeroImage>
+          <HeroImage src={`${PATH_PREFIX}/chair2.png`}></HeroImage>
         </HeroImageWrapper2>
         <HeroImageWrapper1>
-          <HeroImage src="chair.png"></HeroImage>
+          <HeroImage src={`${PATH_PREFIX}/chair.png`}></HeroImage>
         </HeroImageWrapper1>
       </HeroImageSection>
     </HeroSectionInnerWrapper>

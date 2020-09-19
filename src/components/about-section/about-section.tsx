@@ -10,12 +10,13 @@ import {
   AboutContentWrapper
 } from './about-section.style'
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
+import { PATH_PREFIX } from 'common/path'
 
 export const AboutSection = () => (
   <AboutSectionWrapper id="o-firmie">
     <AboutImageSection>
       <ImageWrapper>
-        <ArticleImage src="about.png" alt="about"></ArticleImage>
+        <ArticleImage src={`${PATH_PREFIX}/about.png`} alt="about"></ArticleImage>
       </ImageWrapper>
     </AboutImageSection>
     <AboutArtice>
