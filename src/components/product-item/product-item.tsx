@@ -12,12 +12,16 @@ import {
   MinimapWrapper,
   MinimapItemWrapper,
   MinimapImgWrapper,
-  CounterText
+  CounterText,
+  MinimapPrevBtn,
+  MinimapNextBtn,
+  CarouselMinimapProvider
 } from './product-item.style'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel'
+import { Slider, Slide, CarouselProvider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import { Button } from 'components/button/button'
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
+import { ArrowButton } from 'components/arrow-button/arrow-button'
 
 export const ProductItem = () => {
   const items = [
@@ -64,7 +68,7 @@ export const ProductItem = () => {
           naturalSlideWidth={1200}
           naturalSlideHeight={350}
           totalSlides={items.length}
-          dragEnabled={false}
+          dragEnabled={true}
           infinite={true}
           playDirection="forward"
           currentSlide={currentSlide}
@@ -92,27 +96,31 @@ export const ProductItem = () => {
             </ButtonNextStyled>
           </SliderButtons>
           <MinimapWrapper>
-            <CarouselProvider
+            <CarouselMinimapProvider
               naturalSlideWidth={200}
-              naturalSlideHeight={200}
+              naturalSlideHeight={65}
               totalSlides={items.length}
-              dragEnabled={false}
+              dragEnabled={true}
               infinite={true}
               playDirection="forward"
-              visibleSlides={7}
+              visibleSlides={6}
             >
+              <MinimapPrevBtn>
+                <ArrowButton direction="left" />
+              </MinimapPrevBtn>
               <Slider>
                 {items.map((item, i) => (
                   <Slide index={i} key={i}>
                     <MinimapItemWrapper onClick={() => setCurrentSlide(i)}>
-                      <MinimapImgWrapper>
-                        <Img src={item.img} alt="produkt" />
-                      </MinimapImgWrapper>
+                      <MinimapImgWrapper url={item.img}></MinimapImgWrapper>
                     </MinimapItemWrapper>
                   </Slide>
                 ))}
               </Slider>
-            </CarouselProvider>
+              <MinimapNextBtn>
+                <ArrowButton />
+              </MinimapNextBtn>
+            </CarouselMinimapProvider>
           </MinimapWrapper>
         </CarouselProvider>
       </SliderWrapper>

@@ -14,6 +14,12 @@ export const getBgColor = (color: string) => ({ theme }: ThemeProps) => css`
   background-color: ${((theme.colors as unknown) as { [key: string]: string })[color]};
 `
 
+export const getFill = (color: string) => ({ theme }: ThemeProps) => css`
+  * {
+    fill: ${((theme.colors as unknown) as { [key: string]: string })[color]};
+  }
+`
+
 export const getHeadingUnderline = ({ theme }: ThemeProps) => css`
   position: relative;
   margin: 10px 0 20px;

@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { getPageWidth, getHeadingUnderline } from 'styles/css.helpers'
-import { ButtonBack, ButtonNext } from 'pure-react-carousel'
+import { ButtonBack, ButtonNext, CarouselProvider } from 'pure-react-carousel'
+import { ThemeProps } from 'styles/theme.type'
 
 export const ProductItemWrapper = styled.section`
   padding: 50px 0 75px;
@@ -50,11 +51,41 @@ export const MinimapWrapper = styled.section`
 
 export const MinimapItemWrapper = styled.section`
   width: 200px;
-  height: 200px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-export const MinimapImgWrapper = styled.figure`
+export type MinimapImgWrapperProps = {
+  url: string
+} & ThemeProps
+
+export const MinimapImgWrapper = styled.figure<MinimapImgWrapperProps>`
   width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  ${({ url }: MinimapImgWrapperProps) => css`
+    background-image: url(${url});
+  `};
 `
 
 export const CounterText = styled.p``
+
+export const MinimapPrevBtn = styled(ButtonBack)`
+  border: none;
+  justify-self: flex-start;
+`
+
+export const MinimapNextBtn = styled(ButtonNext)`
+  border: none;
+  justify-self: flex-end;
+`
+
+export const CarouselMinimapProvider = styled(CarouselProvider)`
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+`
