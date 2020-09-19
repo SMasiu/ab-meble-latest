@@ -10,16 +10,26 @@ export const ProductItemWrapper = styled.section`
 
 export const SliderItem = styled.section`
   ${getPageWidth}
-  height: 350px;
+  height: 100%;
   display: flex;
   justify-content: center;
 `
 
-export const ImgWrapper = styled.figure`
-  width: 400px;
-`
+export type ImgWrapperProps = {
+  url: string
+} & ThemeProps
 
-export const Img = styled.img``
+export const ImgWrapper = styled.figure<ImgWrapperProps>`
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  ${({ url }: ImgWrapperProps) => css`
+    background-image: url(${url});
+  `}
+`
 
 export const ButtonBackStyled = styled(ButtonBack)`
   border: none;

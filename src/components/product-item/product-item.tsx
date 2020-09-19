@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
   ProductItemWrapper,
-  Img,
   ImgWrapper,
   SliderItem,
   ButtonBackStyled,
@@ -22,34 +21,19 @@ import { Button } from 'components/button/button'
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
 import { ArrowButton } from 'components/arrow-button/arrow-button'
 
-export const ProductItem = () => {
-  const items = [
-    {
-      img: '/products/product1.png'
-    },
-    {
-      img: '/products/product2.png'
-    },
-    {
-      img: '/products/product3.png'
-    },
-    {
-      img: '/products/product4.png'
-    },
-    {
-      img: '/products/product1.png'
-    },
-    {
-      img: '/products/product2.png'
-    },
-    {
-      img: '/products/product3.png'
-    },
-    {
-      img: '/products/product4.png'
-    }
-  ]
+export interface Product {
+  items: { img: string }[]
+  heading: string
+  subHeading: string
+}
 
+export interface ProductProps {
+  product: Product
+}
+
+export const ProductItem: React.FC<ProductProps> = ({
+  product: { items, heading, subHeading }
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const handleNextSlide = () =>
     setCurrentSlide(currentSlide === items.length - 1 ? 0 : currentSlide + 1)
@@ -59,8 +43,8 @@ export const ProductItem = () => {
   return (
     <ProductItemWrapper>
       <ProductHeader>
-        <HeadingH3>Krzesła i fotele konferencyjne</HeadingH3>
-        <HeadingH4>Produkty</HeadingH4>
+        <HeadingH3>{heading}</HeadingH3>
+        <HeadingH4>{subHeading}</HeadingH4>
       </ProductHeader>
       <SliderWrapper>
         <CarouselProvider
@@ -76,9 +60,7 @@ export const ProductItem = () => {
             {items.map((item, i) => (
               <Slide index={i} key={i}>
                 <SliderItem>
-                  <ImgWrapper>
-                    <Img src={item.img} alt="produkt" />
-                  </ImgWrapper>
+                  <ImgWrapper url={item.img} />
                 </SliderItem>
               </Slide>
             ))}
