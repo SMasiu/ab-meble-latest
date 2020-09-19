@@ -11,7 +11,7 @@ export const HeadingH2 = styled.h2`
   ${({ theme }: ThemeProps) => css`
     text-transform: uppercase;
     font-size: ${theme.fontSize.headingSm};
-    color: ${theme.colors.primary100};
+    color: ${theme.colors.primary200};
   `}
 `
 
