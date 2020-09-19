@@ -37,6 +37,11 @@ export const ArticleContent = styled.p`
   max-width: 500px;
 `
 
+export const ArticleQuotation = styled.p`
+  margin-top: 325px;
+  font-style: italic;
+`
+
 export const HeroImageSection = styled.section`
   position: relative;
 `
