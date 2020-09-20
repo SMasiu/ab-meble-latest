@@ -6,13 +6,27 @@ import { ThemeProps } from 'styles/theme.type'
 export const ProductItemWrapper = styled.section`
   padding: 50px 0 75px;
   ${getPageWidth}
+
+  @media (max-width: 1350px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 90%;
+    padding: 50px 0 0 0;
+  }
 `
 
 export const SliderItem = styled.section`
   ${getPageWidth}
-  height: 100%;
+  height: 700px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1350px) {
+    width: 1000px;
+    height: 500px;
+  }
 `
 
 export type ImgWrapperProps = {
@@ -53,6 +67,10 @@ export const ProductHeader = styled.header`
 
 export const SliderWrapper = styled.section`
   margin-top: 50px;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `
 
 export const MinimapWrapper = styled.section`
@@ -99,3 +117,22 @@ export const CarouselMinimapProvider = styled(CarouselProvider)`
   grid-template-columns: 100px 1fr 100px;
   align-items: center;
 `
+
+export const GalleryWrapper = styled.section`
+  display: none;
+
+  @media (max-width: 1100px) {
+    display: block;
+  }
+`
+
+export type GalleryItemProps = {
+  url: string
+} & ThemeProps
+
+export const GalleryItem = styled.figure<GalleryItemProps>`
+  width: 100%;
+  margin: 25px 0;
+`
+
+export const GalleryImg = styled.img``

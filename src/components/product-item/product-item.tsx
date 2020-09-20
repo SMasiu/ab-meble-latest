@@ -13,7 +13,10 @@ import {
   MinimapImgWrapper,
   MinimapPrevBtn,
   MinimapNextBtn,
-  CarouselMinimapProvider
+  CarouselMinimapProvider,
+  GalleryItem,
+  GalleryWrapper,
+  GalleryImg
 } from './product-item.style'
 import { Slider, Slide, CarouselProvider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
@@ -48,8 +51,8 @@ export const ProductItem: React.FC<ProductProps> = ({
       </ProductHeader>
       <SliderWrapper>
         <CarouselProvider
-          naturalSlideWidth={1200}
-          naturalSlideHeight={350}
+          naturalSlideWidth={1400}
+          naturalSlideHeight={700}
           totalSlides={items.length}
           dragEnabled={true}
           infinite={true}
@@ -103,6 +106,13 @@ export const ProductItem: React.FC<ProductProps> = ({
           </MinimapWrapper>
         </CarouselProvider>
       </SliderWrapper>
+      <GalleryWrapper>
+        {items.map((item, i) => (
+          <GalleryItem key={i}>
+            <GalleryImg src={item.img} alt="product" />
+          </GalleryItem>
+        ))}
+      </GalleryWrapper>
     </ProductItemWrapper>
   )
 }
