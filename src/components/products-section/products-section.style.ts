@@ -6,6 +6,10 @@ import { ThemeProps } from 'styles/theme.type'
 export const ProductsSectionWrapper = styled.section`
   position: relative;
   ${getPageWidth};
+
+  @media (max-width: 1350px) {
+    width: 90%;
+  }
 `
 
 export const ProductLinkAnchor = styled.div`
@@ -26,6 +30,14 @@ export const ProductsItemsWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ProductItem = styled.section``
@@ -51,6 +63,14 @@ export const ProductsCardsWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ProductCard = styled.section``
