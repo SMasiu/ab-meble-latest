@@ -2,8 +2,12 @@ import React from 'react'
 import { NavbarWrapper, NavbarList, NavbarListItem, NavbarListLink } from './navbar.style'
 import { navbarInputs } from 'inputs/navbar.inputs'
 
-export const Navbar: React.FC = () => (
-  <NavbarWrapper>
+export interface NavbarProps {
+  open: boolean
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ open }) => (
+  <NavbarWrapper open={open}>
     <NavbarList>
       {navbarInputs.items.map((item, i) => (
         <NavbarListItem key={i}>
