@@ -4,6 +4,10 @@ import { ThemeProps } from 'styles/theme.type'
 export const HeadingH1 = styled.h1`
   ${({ theme }: ThemeProps) => css`
     font-size: ${theme.fontSize.headingLg};
+
+    @media (max-width: 650px) {
+      font-size: 40px;
+    }
   `}
 `
 

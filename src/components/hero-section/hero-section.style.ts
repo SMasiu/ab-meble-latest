@@ -10,8 +10,12 @@ export const HeroSectionWrapper = styled.section`
   ${getBgColor('light200')}
 
   @media (max-width: 1350px) {
-    min-height: 600px;
+    min-height: 550px;
     height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 50px;
   }
 `
 
@@ -34,6 +38,10 @@ export const HeroArticle = styled.article`
   margin-top: 25%;
   @media (max-width: 1350px) {
     margin-top: 10%;
+  }
+
+  @media (max-width: 1024px) {
+    justify-self: center;
   }
 `
 
@@ -86,6 +94,10 @@ export const HeroImageSection = styled.section`
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+  }
+
+  @media (max-width: 650px) {
+    padding: 25px 0;
   }
 `
 
@@ -181,6 +193,10 @@ export const WaterMark = styled.p`
   font-weight: 800;
   transform: translate(32.5%, 50%) rotate(90deg);
   text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const DecorateLine = styled.span`
