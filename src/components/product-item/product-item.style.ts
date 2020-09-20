@@ -126,11 +126,7 @@ export const GalleryWrapper = styled.section`
   }
 `
 
-export type GalleryItemProps = {
-  url: string
-} & ThemeProps
-
-export const GalleryItem = styled.figure<GalleryItemProps>`
+export const GalleryItem = styled.figure`
   width: 100%;
   margin: 25px 0;
 `
