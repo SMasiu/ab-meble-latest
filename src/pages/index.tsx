@@ -4,7 +4,7 @@ import { SEO } from 'components/seo/seo'
 // import { HeroSection } from 'components/hero-section/hero-section'
 // import { AboutSection } from 'components/about-section/about-section'
 // import { ProductsSection } from 'components/products-section/products-section'
-// import { ProjectsSecton } from 'components/projects-section/projects-section'
+import { ProjectsSecton } from 'components/projects-section/projects-section'
 
 const IndexPage: React.FC = () => {
   return (
@@ -12,8 +12,8 @@ const IndexPage: React.FC = () => {
       <SEO title="Home" />
       {/* <HeroSection />
       <AboutSection />
-      <ProductsSection />
-      <ProjectsSecton /> */}
+      <ProductsSection /> */}
+      <ProjectsSecton />
     </Layout>
   )
 }

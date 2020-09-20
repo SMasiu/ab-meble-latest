@@ -20,6 +20,10 @@ export const HeadingH3 = styled.h3`
     text-transform: uppercase;
     font-size: ${theme.fontSize.headingMd};
     color: ${theme.colors.dark100};
+
+    @media (max-width: 650px) {
+      font-size: 24px;
+    }
   `}
 `
 

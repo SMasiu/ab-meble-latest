@@ -16,6 +16,10 @@ export const ProjectsSectionWrapper = styled.section`
   justify-content: center;
   flex-direction: column;
   ${getPageWidth}
+
+  @media (max-width: 1350px) {
+    height: auto;
+  }
 `
 
 export const ProjectsHeader = styled.header`
@@ -31,10 +35,25 @@ export const ProjectsInnerWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+
+  @media (max-width: 1350px) {
+    margin: 25px 0 50px;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ProjectItemWrapper = styled.article`
   position: relative;
+
+  @media (max-width: 1350px) {
+    margin: auto;
+    width: 700px;
+  }
+
+  @media (max-width: 900px) {
+    margin: auto;
+    width: 90%;
+  }
 
   &::after {
     content: '';
@@ -45,6 +64,13 @@ export const ProjectItemWrapper = styled.article`
     left: -25px;
     bottom: 20px;
     ${getBgColor('primary100')}
+
+    @media (max-width: 650px) {
+      height: 250px;
+      left: -5px;
+      width: calc(100% + 10px);
+      bottom: -15px;
+    }
   }
 `
 
@@ -57,6 +83,10 @@ export const ProjectImage = styled.figure<ProjectImageProps>`
   background-position: center;
   background-size: cover;
   height: 450px;
+
+  @media (max-width: 450px) {
+    height: 250px;
+  }
 `
 export const ProjectContent = styled.section`
   position: relative;
@@ -67,6 +97,11 @@ export const ProjectHeader = styled.header`
   margin-top: 25px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
 `
 
 export const ProjectHeading = styled(HeadingH4)`
@@ -78,4 +113,12 @@ export const ProjectHeading = styled(HeadingH4)`
   font-weight: 800;
   ${getColor('dark100')}
   ${getFontSize('headingMd')}
+
+  @media (max-width: 650px) {
+    margin: 0;
+    text-align: center;
+    width: auto;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
 `
