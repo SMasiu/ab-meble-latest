@@ -14,6 +14,11 @@ export const OtherCategoriesWrapper = styled.section`
 
 export const CategoriesInnerWrapper = styled.section`
   ${getPageWidth}
+
+  @media (max-width: 1350px) {
+    width: 100%;
+    padding: 0 50px;
+  }
 `
 
 export const CategoriesHeader = styled.header`
@@ -28,6 +33,10 @@ export const CategoryItemsWrapper = styled.section`
   margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const CategoryItemWrapper = styled.section``
@@ -47,6 +56,18 @@ export const CategoryItem = styled.figure<CategoryItemProps>`
   ${({ path }: CategoryItemProps) => css`
     background-image: url(${path});
   `}
+
+  @media (max-width: 1350px) {
+    height: 200px;
+  }
+
+  @media (max-width: 850px) {
+    height: 350px;
+  }
+
+  @media (max-width: 600px) {
+    height: 250px;
+  }
 `
 
 export const CategoryItemHeader = styled.header`
