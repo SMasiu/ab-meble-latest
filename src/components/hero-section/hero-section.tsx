@@ -14,7 +14,8 @@ import {
   SliderButton,
   WaterMark,
   DecorateLine,
-  ArticleQuotation
+  ArticleQuotation,
+  ArticleQuotationWrapper
 } from './hero-section.style'
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
 import { Button } from 'components/button/button'
@@ -24,6 +25,9 @@ export const HeroSection = () => (
   <HeroSectionWrapper>
     <DecorateLine />
     <WaterMark>meble</WaterMark>
+    <ArticleQuotationWrapper>
+      <ArticleQuotation>Zapweniamy dobre miejsce w Twoim biznesie.</ArticleQuotation>
+    </ArticleQuotationWrapper>
     <HeroSectionInnerWrapper>
       <HeroArticle>
         <HeroHeader>
@@ -37,7 +41,6 @@ export const HeroSection = () => (
           voluptas atque deserunt ullam, consectetur eaque non ex.
         </ArticleContent>
         <Button>Pokaż więcej</Button>
-        <ArticleQuotation>Zapweniamy dobre miejsce w Twoim biznesie.</ArticleQuotation>
       </HeroArticle>
       <HeroImageSection>
         <HeroImageWrapper2>

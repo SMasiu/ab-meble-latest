@@ -37,8 +37,16 @@ export const ArticleContent = styled.p`
   max-width: 500px;
 `
 
+export const ArticleQuotationWrapper = styled.div`
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+`
+
 export const ArticleQuotation = styled.p`
-  margin-top: 325px;
+  ${getPageWidth}
+  display: block;
   font-style: italic;
 `
 
