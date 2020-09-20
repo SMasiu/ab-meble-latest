@@ -8,6 +8,11 @@ export const HeroSectionWrapper = styled.section`
   position: relative;
   margin-bottom: 100px;
   ${getBgColor('light200')}
+
+  @media (max-width: 1350px) {
+    min-height: 600px;
+    height: auto;
+  }
 `
 
 export const HeroSectionInnerWrapper = styled.section`
@@ -15,10 +20,21 @@ export const HeroSectionInnerWrapper = styled.section`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 1350px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const HeroArticle = styled.article`
   margin-top: 25%;
+  @media (max-width: 1350px) {
+    margin-top: 10%;
+  }
 `
 
 export const HeroHeader = styled.header`
@@ -42,16 +58,35 @@ export const ArticleQuotationWrapper = styled.div`
   position: absolute;
   left: 0;
   bottom: 100px;
+
+  @media (max-width: 1350px) {
+    bottom: 25px;
+  }
 `
 
 export const ArticleQuotation = styled.p`
   ${getPageWidth}
   display: block;
   font-style: italic;
+
+  @media (max-width: 1350px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const HeroImageSection = styled.section`
   position: relative;
+  @media (max-width: 1024px) {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
 `
 
 export const HeroImageWrapper = styled.figure`
@@ -69,6 +104,22 @@ export const HeroImageWrapper = styled.figure`
     background-color: #3b3b3b22;
     filter: blur(25px);
     transform: skew(-15deg, 45deg);
+  }
+
+  @media (max-width: 1650px) {
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1350px) {
+    width: 50%;
+    bottom: -225px;
+  }
+
+  @media (max-width: 1024px) {
+    position: static;
+    transform: scaleX(-1) translateX(0);
   }
 `
 
@@ -95,6 +146,10 @@ export const SliderButtonWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @media (max-width: 1350px) {
+    bottom: 25px;
+  }
 `
 
 export type SliderButtonProps = {
@@ -135,4 +190,12 @@ export const DecorateLine = styled.span`
   height: 200px;
   width: 1px;
   ${getBgColor('dark300')}
+
+  @media (max-width: 1600px) {
+    left: 20px;
+  }
+
+  @media (max-width: 1350px) {
+    display: none;
+  }
 `
