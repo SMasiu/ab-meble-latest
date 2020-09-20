@@ -4,6 +4,10 @@ import { css } from 'styled-components'
 export const getPageWidth = ({ theme }: ThemeProps) => css`
   max-width: ${theme.page.width};
   margin: auto;
+
+  @media (max-width: 1500px) {
+    max-width: 1200px;
+  }
 `
 
 export const getColor = (color: string) => ({ theme }: ThemeProps) => css`

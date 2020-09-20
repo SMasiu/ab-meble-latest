@@ -7,6 +7,10 @@ export const HeaderWrapper = styled.header`
   top: 0;
   z-index: 10000;
   padding: 0 25px;
+
+  @media (max-width: 650px) {
+    padding: 0;
+  }
 `
 
 export const HeaderInnerWrapper = styled.section`
@@ -16,6 +20,10 @@ export const HeaderInnerWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 650px) {
+    width: 90%;
+  }
 `
 
 export const HamburgerWrapper = styled.section`

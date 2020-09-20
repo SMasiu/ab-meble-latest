@@ -4,11 +4,14 @@ import {
   FooterInnerWrapper,
   FooterCopyRight,
   FooterColumns,
-  FooterColumn,
   FooterColumnHeader,
   ColumnItem,
   FooterColumnAddressHeader,
-  ColumnItemLink
+  ColumnItemLink,
+  ContactColumn,
+  AboutCompanyColumn,
+  CategoriesColumn,
+  FormColumn
 } from './footer.style'
 import { HeadingH4 } from 'components/headings/headings'
 import { Contact } from 'components/contact/contact'
@@ -18,7 +21,7 @@ export const Footer: React.FC = () => (
   <FooterWrapper id="kontakt">
     <FooterInnerWrapper>
       <FooterColumns>
-        <FooterColumn>
+        <ContactColumn>
           <FooterColumnHeader>
             <HeadingH4>Kontakt</HeadingH4>
           </FooterColumnHeader>
@@ -29,16 +32,16 @@ export const Footer: React.FC = () => (
           </FooterColumnAddressHeader>
           <ColumnItem>Olszynki 2-20,</ColumnItem>
           <ColumnItem>44-100 Gliwice</ColumnItem>
-        </FooterColumn>
-        <FooterColumn>
+        </ContactColumn>
+        <AboutCompanyColumn>
           <FooterColumnHeader>
             <HeadingH4>O firmie</HeadingH4>
           </FooterColumnHeader>
           <ColumnItem>Czym się zajmujemy</ColumnItem>
           <ColumnItem>Projekty</ColumnItem>
           <ColumnItem>Realizacje</ColumnItem>
-        </FooterColumn>
-        <FooterColumn>
+        </AboutCompanyColumn>
+        <CategoriesColumn>
           <FooterColumnHeader>
             <HeadingH4>Produkty i kategorie</HeadingH4>
           </FooterColumnHeader>
@@ -47,13 +50,13 @@ export const Footer: React.FC = () => (
               <ColumnItemLink to={item.link}>{item.header}</ColumnItemLink>
             </ColumnItem>
           ))}
-        </FooterColumn>
-        <FooterColumn>
+        </CategoriesColumn>
+        <FormColumn>
           <FooterColumnHeader>
             <HeadingH4>Napisz do nas</HeadingH4>
           </FooterColumnHeader>
           <Contact />
-        </FooterColumn>
+        </FormColumn>
       </FooterColumns>
       <FooterCopyRight>&copy; AB Meble</FooterCopyRight>
     </FooterInnerWrapper>
