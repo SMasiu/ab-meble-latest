@@ -19,13 +19,13 @@ export const ProductItemWrapper = styled.section`
 
 export const SliderItem = styled.section`
   ${getPageWidth}
-  height: 700px;
+  height: 475px;
   display: flex;
   justify-content: center;
 
   @media (max-width: 1350px) {
     width: 1000px;
-    height: 500px;
+    height: 400px;
   }
 `
 

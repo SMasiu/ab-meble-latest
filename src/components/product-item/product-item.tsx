@@ -52,7 +52,7 @@ export const ProductItem: React.FC<ProductProps> = ({
       <SliderWrapper>
         <CarouselProvider
           naturalSlideWidth={1400}
-          naturalSlideHeight={700}
+          naturalSlideHeight={475}
           totalSlides={items.length}
           dragEnabled={true}
           infinite={true}
