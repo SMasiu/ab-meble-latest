@@ -5,11 +5,11 @@ import {
   RealizationContentWrapper,
   RealizationArticle,
   ReferenceWrapper,
-  ReferenceImg,
   RealizationContent,
   ReferenceImageWrapper
 } from './about-realization.style'
 import { HeadingH3 } from 'components/headings/headings'
+import { RealizationDynamicImage } from './realization-dynamic-image'
 
 export interface Realization {
   realizationTextLine1: string
@@ -34,9 +34,11 @@ export const AboutRealization: React.FC<RealizationProps> = ({
         <RealizationContent>{realizationTextLine2}</RealizationContent>
       </RealizationArticle>
       <ReferenceWrapper>
-        <ReferenceImageWrapper>
-          <ReferenceImg src={referenceImage} alt="reference" />
-        </ReferenceImageWrapper>
+        {referenceImage && (
+          <ReferenceImageWrapper>
+            <RealizationDynamicImage fileName={referenceImage} alt="reference" />
+          </ReferenceImageWrapper>
+        )}
       </ReferenceWrapper>
     </RealizationContentWrapper>
   </AboutRealizationWrapper>

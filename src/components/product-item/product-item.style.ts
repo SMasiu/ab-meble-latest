@@ -1,7 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { getPageWidth, getHeadingUnderline } from 'styles/css.helpers'
 import { ButtonBack, ButtonNext, CarouselProvider } from 'pure-react-carousel'
 import { ThemeProps } from 'styles/theme.type'
+import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 
 export const ProductItemWrapper = styled.section`
   padding: 50px 0 75px;
@@ -29,20 +31,12 @@ export const SliderItem = styled.section`
   }
 `
 
-export type ImgWrapperProps = {
-  url: string
-} & ThemeProps
-
-export const ImgWrapper = styled.figure<ImgWrapperProps>`
+export const ImgWrapper = styled(BackgroundImage)`
   width: 100%;
   height: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
-  ${({ url }: ImgWrapperProps) => css`
-    background-image: url(${url});
-  `}
 `
 
 export const ButtonBackStyled = styled(ButtonBack)`
@@ -89,15 +83,12 @@ export type MinimapImgWrapperProps = {
   url: string
 } & ThemeProps
 
-export const MinimapImgWrapper = styled.figure<MinimapImgWrapperProps>`
+export const MinimapImgWrapper = styled(BackgroundImage)`
   width: 100%;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  ${({ url }: MinimapImgWrapperProps) => css`
-    background-image: url(${url});
-  `};
 `
 
 export const CounterText = styled.p``
@@ -131,4 +122,4 @@ export const GalleryItem = styled.figure`
   margin: 25px 0;
 `
 
-export const GalleryImg = styled.img``
+export const GalleryImg: any = styled(Img)``

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
   ProductItemWrapper,
-  ImgWrapper,
   SliderItem,
   ButtonBackStyled,
   ButtonNextStyled,
@@ -10,19 +9,20 @@ import {
   SliderWrapper,
   MinimapWrapper,
   MinimapItemWrapper,
-  MinimapImgWrapper,
   MinimapPrevBtn,
   MinimapNextBtn,
   CarouselMinimapProvider,
   GalleryItem,
-  GalleryWrapper,
-  GalleryImg
+  GalleryWrapper
 } from './product-item.style'
 import { Slider, Slide, CarouselProvider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import { Button } from 'components/button/button'
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
 import { ArrowButton } from 'components/arrow-button/arrow-button'
+import { GalleryDynamicImage } from './product-item-dynamic-image'
+import { GalleryMinimapDynamicImage } from './product-minimap-dynamic-image'
+import { ProductMobileDynamicImage } from './gallery-mobile-dynamic-image'
 
 export interface Product {
   items: { img: string }[]
@@ -63,7 +63,7 @@ export const ProductItem: React.FC<ProductProps> = ({
             {items.map((item, i) => (
               <Slide index={i} key={i}>
                 <SliderItem>
-                  <ImgWrapper url={item.img} />
+                  <GalleryDynamicImage fileName={item.img} alt="product" />
                 </SliderItem>
               </Slide>
             ))}
@@ -94,7 +94,7 @@ export const ProductItem: React.FC<ProductProps> = ({
                 {items.map((item, i) => (
                   <Slide index={i} key={i}>
                     <MinimapItemWrapper onClick={() => setCurrentSlide(i)}>
-                      <MinimapImgWrapper url={item.img}></MinimapImgWrapper>
+                      <GalleryMinimapDynamicImage fileName={item.img} alt="minimap" />
                     </MinimapItemWrapper>
                   </Slide>
                 ))}
@@ -109,7 +109,7 @@ export const ProductItem: React.FC<ProductProps> = ({
       <GalleryWrapper>
         {items.map((item, i) => (
           <GalleryItem key={i}>
-            <GalleryImg src={item.img} alt="product" />
+            <ProductMobileDynamicImage fileName={item.img} alt="product" />
           </GalleryItem>
         ))}
       </GalleryWrapper>

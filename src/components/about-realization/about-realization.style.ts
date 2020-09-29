@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { getPageWidth, getHeadingUnderline, getBgColor } from 'styles/css.helpers'
+import Img from 'gatsby-image'
 
 export const AboutRealizationWrapper = styled.section`
   ${getPageWidth}
@@ -44,6 +45,7 @@ export const ReferenceWrapper = styled.section`
 `
 
 export const ReferenceImageWrapper = styled.figure`
+  width: 100%;
   padding: 50px;
   max-width: 600px;
 
@@ -52,4 +54,4 @@ export const ReferenceImageWrapper = styled.figure`
   }
 `
 
-export const ReferenceImg = styled.img``
+export const ReferenceImg: any = styled(Img)``
