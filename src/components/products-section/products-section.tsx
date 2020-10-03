@@ -8,14 +8,14 @@ import {
   ProductImageWrapper,
   ProductHeader,
   ProductHeading,
-  ProductImage,
   ProductsCardsWrapper,
   ProductCard,
-  CardImage,
   ProductLinkAnchor
 } from './products-section.style'
 import { productsSectionInput } from 'inputs/products-section.input'
 import { Link } from 'gatsby'
+import { ProductSectionDynamicImageLg } from './dunamic-image-lg'
+import { ProductSectionDynamicImageSm } from './dynamic-image-sm'
 
 export const ProductsSection = () => (
   <ProductsSectionWrapper>
@@ -27,7 +27,7 @@ export const ProductsSection = () => (
       {productsSectionInput.cards.map((card, i) => (
         <Link key={i} to={card.link}>
           <ProductCard>
-            <CardImage url={card.imgPath} />
+            <ProductSectionDynamicImageLg fileName={card.imgPath} alt="Produkt" />
             <ProductHeader>
               <ProductHeading>{card.header}</ProductHeading>
             </ProductHeader>
@@ -40,7 +40,7 @@ export const ProductsSection = () => (
         <Link to={item.link} key={i}>
           <ProductItem>
             <ProductImageWrapper>
-              <ProductImage src={item.imgPath} alt="product" />
+              <ProductSectionDynamicImageSm fileName={item.imgPath} alt="produkt" />
             </ProductImageWrapper>
             <ProductHeader>
               <ProductHeading>{item.header}</ProductHeading>

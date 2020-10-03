@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { HeadingH3, HeadingH5 } from 'components/headings/headings'
 import { getHeadingCenterUnderline, getPageWidth, getImgHoverBg } from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
+import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 
 export const ProductsSectionWrapper = styled.section`
   position: relative;
@@ -48,7 +50,7 @@ export const ProductImageWrapper = styled.section`
   ${getImgHoverBg}
 `
 
-export const ProductImage = styled.img``
+export const ProductImage: any = styled(Img)``
 
 export const ProductHeader = styled.header`
   margin-top: 15px;
@@ -79,8 +81,7 @@ export type CardImageWrapperProps = {
   url: string
 } & ThemeProps
 
-export const CardImage = styled.figure<CardImageWrapperProps>`
-  background-image: url(${({ url }: CardImageWrapperProps) => url});
+export const CardImage = styled(BackgroundImage)`
   background-size: cover;
   background-position: center;
   width: 100%;

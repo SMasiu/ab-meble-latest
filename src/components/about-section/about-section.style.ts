@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { getPageWidth, getHeadingUnderline, getHeadingCenterUnderline } from 'styles/css.helpers'
+import Img from 'gatsby-image'
 
 export const AboutSectionWrapper = styled.section`
   ${getPageWidth}
@@ -42,7 +43,7 @@ export const ImageWrapper = styled.figure`
   }
 `
 
-export const ArticleImage = styled.img``
+export const ArticleImage: any = styled(Img)``
 
 export const AboutArtice = styled.article`
   grid-area: article;

@@ -4,19 +4,18 @@ import {
   AboutImageSection,
   AboutArtice,
   ImageWrapper,
-  ArticleImage,
   AboutHeader,
   AboutContent,
   AboutContentWrapper
 } from './about-section.style'
 import { HeadingH3, HeadingH4 } from 'components/headings/headings'
-import { PATH_PREFIX } from 'common/path'
+import { AboutDynamicImage } from './dynamic-image'
 
 export const AboutSection = () => (
   <AboutSectionWrapper id="o-firmie">
     <AboutImageSection>
       <ImageWrapper>
-        <ArticleImage src={`${PATH_PREFIX}/about.png`} alt="about"></ArticleImage>
+        <AboutDynamicImage fileName={`about.png`} alt="about" />
       </ImageWrapper>
     </AboutImageSection>
     <AboutArtice>

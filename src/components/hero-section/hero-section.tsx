@@ -9,7 +9,6 @@ import {
   HeroImageSection,
   HeroImageWrapper1,
   HeroImageWrapper2,
-  HeroImage,
   SliderButtonWrapper,
   SliderButton,
   WaterMark,
@@ -19,7 +18,7 @@ import {
 } from './hero-section.style'
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
 import { Button } from 'components/button/button'
-import { PATH_PREFIX } from 'common/path'
+import { HeroDynamicImage } from './dynamic-image'
 
 export const HeroSection = () => (
   <HeroSectionWrapper>
@@ -44,10 +43,10 @@ export const HeroSection = () => (
       </HeroArticle>
       <HeroImageSection>
         <HeroImageWrapper2>
-          <HeroImage src={`${PATH_PREFIX}/chair2.png`}></HeroImage>
+          <HeroDynamicImage fileName={`hero_chair2.png`} alt="chair" />
         </HeroImageWrapper2>
         <HeroImageWrapper1>
-          <HeroImage src={`${PATH_PREFIX}/chair.png`}></HeroImage>
+          <HeroDynamicImage fileName={`hero_chair1.png`} alt="chair" />
         </HeroImageWrapper1>
       </HeroImageSection>
     </HeroSectionInnerWrapper>

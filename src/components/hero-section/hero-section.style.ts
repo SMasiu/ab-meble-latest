@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { getPageWidth, getBgColor, getHeadingUnderline } from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
+import Img from 'gatsby-image'
 
 export const HeroSectionWrapper = styled.section`
   height: calc(100vh - 80px);
@@ -148,7 +149,7 @@ export const HeroImageWrapper2 = styled(HeroImageWrapper)`
   width: 375px;
 `
 
-export const HeroImage = styled.img``
+export const HeroImage: any = styled(Img)``
 
 export const SliderButtonWrapper = styled.section`
   position: absolute;
