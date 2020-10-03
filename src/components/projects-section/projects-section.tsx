@@ -5,14 +5,13 @@ import {
   ProjectsHeading,
   ProjectsInnerWrapper,
   ProjectItemWrapper,
-  ProjectImage,
   ProjectHeader,
   ProjectHeading,
   ProjectContent
 } from './projects-section.style'
 import { Button } from 'components/button/button'
 import { Link } from 'gatsby'
-import { PATH_PREFIX } from 'common/path'
+import { ProjectSectionDynamicImage } from './dynamic-image'
 
 export const ProjectsSecton = () => (
   <ProjectsSectionWrapper>
@@ -22,7 +21,7 @@ export const ProjectsSecton = () => (
     <ProjectsInnerWrapper>
       <ProjectItemWrapper>
         <ProjectContent>
-          <ProjectImage url={`${PATH_PREFIX}/projects/project1.jpg`} />
+          <ProjectSectionDynamicImage fileName={`project_section_project.jpg`} alt="Projekty" />
           <ProjectHeader>
             <ProjectHeading>Projekty</ProjectHeading>
             <Link to="/projekty">
@@ -33,7 +32,10 @@ export const ProjectsSecton = () => (
       </ProjectItemWrapper>
       <ProjectItemWrapper>
         <ProjectContent>
-          <ProjectImage url={`${PATH_PREFIX}/projects/project2.jpg`} />
+          <ProjectSectionDynamicImage
+            fileName={`project_section_realization.jpg`}
+            alt="Realizacje"
+          />
           <ProjectHeader>
             <ProjectHeading>Realizacje</ProjectHeading>
             <Link to="/realizacje">

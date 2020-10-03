@@ -8,6 +8,7 @@ import {
   getBgColor
 } from 'styles/css.helpers'
 import { ThemeProps } from 'styles/theme.type'
+import BackgroundImage from 'gatsby-background-image'
 
 export const ProjectsSectionWrapper = styled.section`
   height: 90vh;
@@ -78,8 +79,7 @@ export type ProjectImageProps = {
   url: string
 } & ThemeProps
 
-export const ProjectImage = styled.figure<ProjectImageProps>`
-  background-image: url(${(props: ProjectImageProps) => props.url});
+export const ProjectImage: any = styled(BackgroundImage)`
   background-position: center;
   background-size: cover;
   height: 450px;
