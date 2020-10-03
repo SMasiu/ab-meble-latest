@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { getHeadingCenterUnderline, getPageWidth, getImgHoverBg } from 'styles/css.helpers'
-import { ThemeProps } from 'styles/theme.type'
+import BackgroundImage from 'gatsby-background-image'
 
 export const RealizationListWrapper = styled.section`
   padding: 75px 0;
@@ -34,18 +34,11 @@ export const RealizationItem = styled.article`
   cursor: pointer;
 `
 
-export type RealizationItemImageProps = {
-  url: string
-} & ThemeProps
-
-export const RealizationItemImage = styled.figure<RealizationItemImageProps>`
+export const RealizationItemImage: any = styled(BackgroundImage)`
   background-size: cover;
   background-position: center;
   height: 250px;
   ${getImgHoverBg}
-  ${({ url }: RealizationItemImageProps) => css`
-    background-image: url(${url});
-  `}
 `
 
 export const RealizationItemHeader = styled.header`

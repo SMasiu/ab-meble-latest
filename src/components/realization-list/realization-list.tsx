@@ -4,56 +4,55 @@ import {
   RealizationListHeader,
   RealizationsList,
   RealizationItem,
-  RealizationItemImage,
   RealizationItemHeader
 } from './realization-list.style'
 import { HeadingH3, HeadingH5 } from 'components/headings/headings'
 import { Link } from 'gatsby'
-import { PATH_PREFIX } from 'common/path'
+import { RealizationListDynamicImage } from './dynamic-image'
 
 const items = [
   {
-    img: `${PATH_PREFIX}/products/product5.jpg`,
+    img: `realization_list1.jpg`,
     header: 'CPR Rzeszow'
   },
   {
-    img: `${PATH_PREFIX}/products/product6.jpg`,
+    img: `realization_list2.jpg`,
     header: 'JAKUBIEC Ruda Sląska'
   },
   {
-    img: `${PATH_PREFIX}/products/product7.jpg`,
+    img: `realization_list3.jpg`,
     header: 'KANLUX'
   },
   {
-    img: `${PATH_PREFIX}/products/product8.jpg`,
+    img: `realization_list4.jpg`,
     header: 'KUCHNIA'
   },
   {
-    img: `${PATH_PREFIX}/products/product9.jpg`,
+    img: `realization_list5.jpg`,
     header: 'MEGAN'
   },
   {
-    img: `${PATH_PREFIX}/products/product10.jpg`,
+    img: `realization_list6.jpg`,
     header: 'O_S COMPUTER SOFT_Radzionków'
   },
   {
-    img: `${PATH_PREFIX}/products/product5.jpg`,
+    img: `realization_list1.jpg`,
     header: 'poczta polska punkt'
   },
   {
-    img: `${PATH_PREFIX}/products/product6.jpg`,
+    img: `realization_list2.jpg`,
     header: 'QNT'
   },
   {
-    img: `${PATH_PREFIX}/products/product7.jpg`,
+    img: `realization_list3.jpg`,
     header: 'SONY'
   },
   {
-    img: `${PATH_PREFIX}/products/product8.jpg`,
+    img: `realization_list4.jpg`,
     header: 'TPP Zabrze'
   },
   {
-    img: `${PATH_PREFIX}/products/product9.jpg`,
+    img: `realization_list5.jpg`,
     header: 'WCPR Katowice'
   }
 ]
@@ -67,7 +66,7 @@ export const RealizationList = () => (
       {items.map((item, i) => (
         <Link to={'/realizacje/qnt'} key={i}>
           <RealizationItem>
-            <RealizationItemImage url={item.img} />
+            <RealizationListDynamicImage fileName={item.img} alt="realicajca" />
             <RealizationItemHeader>
               <HeadingH5>{item.header}</HeadingH5>
             </RealizationItemHeader>
