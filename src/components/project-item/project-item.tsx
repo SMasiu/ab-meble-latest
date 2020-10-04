@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import {
   ProjectItemWrapper,
   ProjectItemMinimap,
-  MinimapImage,
-  ProjectItemImage,
   ProjectItemArticle,
   ArticleHeader,
   ProjectItemContent,
@@ -12,6 +10,8 @@ import {
   ItemHeader
 } from './project-item.style'
 import { HeadingH5 } from 'components/headings/headings'
+import { ProjectSectionDynamicMinimapImage } from './dynamic-minimap-image'
+import { ProjectSectionDynamicPreviewImage } from './dynamic-preview-image'
 
 export interface ProjectItemProps {
   item: {
@@ -34,10 +34,12 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({ item }) => {
       <ProjectItemContent>
         <ProjectItemMinimap>
           {item.images.map((img, i) => (
-            <MinimapImage key={i} url={img} onClick={() => setCurrentImg(i)} />
+            <div onClick={() => setCurrentImg(i)} key={i}>
+              <ProjectSectionDynamicMinimapImage fileName={img} alt="projekt" />
+            </div>
           ))}
         </ProjectItemMinimap>
-        <ProjectItemImage url={item.images[currentImg]} />
+        <ProjectSectionDynamicPreviewImage fileName={item.images[currentImg]} alt="projekt" />
         <ProjectItemArticle>
           <ArticleHeader>
             <HeadingH5>Krzeło</HeadingH5>

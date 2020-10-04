@@ -1,11 +1,7 @@
-import styled, { css } from 'styled-components'
-import { ThemeProps } from 'styles/theme.type'
+import styled from 'styled-components'
 import { getBgColor, getHeadingCenterUnderline, getColor } from 'styles/css.helpers'
 import { HeadingH3 } from 'components/headings/headings'
-
-export type UrlProps = {
-  url: string
-} & ThemeProps
+import BackgroundImage from 'gatsby-background-image'
 
 export const ProjectItemWrapper = styled.section`
   position: relative;
@@ -76,17 +72,13 @@ export const ProjectItemMinimap = styled.aside`
   }
 `
 
-export const MinimapImage = styled.figure<UrlProps>`
+export const MinimapImage: any = styled(BackgroundImage)`
   margin: 15px;
   width: 220px;
   height: 120px;
   background-size: cover;
   background-position: center;
   cursor: pointer;
-
-  ${({ url }: UrlProps) => css`
-    background-image: url(${url});
-  `}
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -102,15 +94,12 @@ export const MinimapImage = styled.figure<UrlProps>`
   }
 `
 
-export const ProjectItemImage = styled.figure<UrlProps>`
+export const ProjectItemImage = styled(BackgroundImage)`
   grid-area: image;
   width: 100%;
   height: 450px;
   background-size: cover;
   background-position: center;
-  ${({ url }: UrlProps) => css`
-    background-image: url(${url});
-  `}
 
   @media (max-width: 700px) {
     display: none;
