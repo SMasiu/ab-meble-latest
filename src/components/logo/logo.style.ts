@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const LogoWrapper = styled.figure`
-  width: 150px;
-  padding: 10px 0;
+  width: 125px;
   transition: width 0.3s;
   will-change: width;
 

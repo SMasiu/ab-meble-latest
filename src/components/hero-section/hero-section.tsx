@@ -19,6 +19,7 @@ import {
 import { HeadingH1, HeadingH2 } from 'components/headings/headings'
 import { Button } from 'components/button/button'
 import { HeroDynamicImage } from './dynamic-image'
+import { Link } from 'gatsby'
 
 export const HeroSection = () => (
   <HeroSectionWrapper>
@@ -39,7 +40,9 @@ export const HeroSection = () => (
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ab eveniet rerum
           voluptas atque deserunt ullam, consectetur eaque non ex.
         </ArticleContent>
-        <Button>Pokaż więcej</Button>
+        <Link to="/#o-firmie">
+          <Button>Pokaż więcej</Button>
+        </Link>
       </HeroArticle>
       <HeroImageSection>
         <HeroImageWrapper2>
