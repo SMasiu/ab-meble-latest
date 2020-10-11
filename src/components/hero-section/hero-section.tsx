@@ -37,8 +37,8 @@ export const HeroSection = () => (
           </HeadingH2>
         </HeroHeader>
         <ArticleContent>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ab eveniet rerum
-          voluptas atque deserunt ullam, consectetur eaque non ex.
+          Pracownik niezadowolony z warunków pracy, to pracownik mniej wydajny. Stworzenie
+          przyjaznego otoczenia pracy powinno być celem każdego przedsiębiorstwa.
         </ArticleContent>
         <Link to="/#o-firmie">
           <Button>Pokaż więcej</Button>

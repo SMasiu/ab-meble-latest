@@ -4,18 +4,20 @@ import Img from 'gatsby-image'
 
 export const AboutSectionWrapper = styled.section`
   ${getPageWidth}
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'image article';
   gap: 50px;
-  height: 80vh;
+  height: auto;
   min-height: 700px;
+  margin: 150px auto 100px;
 
   @media (max-width: 1350px) {
     padding: 0 50px;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-areas: 'article' 'image';
     height: auto;
@@ -40,6 +42,12 @@ export const ImageWrapper = styled.figure`
 
   @media (max-width: 950px) {
     max-width: 400px;
+    width: 400px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 400px;
+    width: 300px;
   }
 `
 
@@ -47,15 +55,6 @@ export const ArticleImage: any = styled(Img)``
 
 export const AboutArtice = styled.article`
   grid-area: article;
-  margin-top: 25%;
-
-  @media (max-width: 1350px) {
-    margin-top: 40%;
-  }
-
-  @media (max-width: 950px) {
-    margin-top: 0;
-  }
 `
 
 export const AboutHeader = styled.header`
@@ -76,4 +75,10 @@ export const AboutContentWrapper = styled.section`
 export const AboutContent = styled.p`
   padding: 5px 0;
   max-width: 600px;
+`
+
+export const LinkAnchor = styled.span`
+  position: absolute;
+  left: 0;
+  top: -100px;
 `

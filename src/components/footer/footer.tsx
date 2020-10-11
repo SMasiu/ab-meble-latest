@@ -37,9 +37,15 @@ export const Footer: React.FC = () => (
           <FooterColumnHeader>
             <HeadingH4>O firmie</HeadingH4>
           </FooterColumnHeader>
-          <ColumnItem>Czym się zajmujemy</ColumnItem>
-          <ColumnItem>Projekty</ColumnItem>
-          <ColumnItem>Realizacje</ColumnItem>
+          <ColumnItem>
+            <ColumnItemLink to="/#o-firmie">Czym się zajmujemy</ColumnItemLink>
+          </ColumnItem>
+          <ColumnItem>
+            <ColumnItemLink to="/projekty">Projekty</ColumnItemLink>
+          </ColumnItem>
+          <ColumnItem>
+            <ColumnItemLink to="/realizacje">Realizacje</ColumnItemLink>
+          </ColumnItem>
         </AboutCompanyColumn>
         <CategoriesColumn>
           <FooterColumnHeader>
